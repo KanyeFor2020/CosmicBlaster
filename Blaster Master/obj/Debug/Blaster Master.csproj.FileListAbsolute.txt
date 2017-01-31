@@ -30,3 +30,11 @@ C:\Users\amlon450\Desktop\Blaster Master C#\Blaster Master\obj\Debug\Blaster Mas
 C:\Users\amlon450\Desktop\Blaster Master C#\Blaster Master\obj\Debug\BlasterMaster.exe
 C:\Users\amlon450\Desktop\Blaster Master C#\Blaster Master\obj\Debug\BlasterMaster.pdb
 C:\Users\amlon450\Desktop\Blaster Master C#\Blaster Master\obj\Debug\Blaster Master.csprojResolveAssemblyReference.cache
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\obj\Debug\BlasterMaster.exe
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\obj\Debug\BlasterMaster.pdb
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\bin\Debug\BlasterMaster.exe
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\bin\Debug\BlasterMaster.pdb
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\obj\Debug\Blaster Master.csprojResolveAssemblyReference.cache
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\obj\Debug\BlasterMaster.Form1.resources
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\obj\Debug\BlasterMaster.Properties.Resources.resources
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\obj\Debug\Blaster Master.csproj.GenerateResource.Cache
