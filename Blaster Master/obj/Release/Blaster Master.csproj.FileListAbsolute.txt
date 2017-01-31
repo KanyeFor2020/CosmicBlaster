@@ -14,3 +14,9 @@ C:\Users\amlon450\Desktop\Blaster Master C#\Blaster Master\obj\Release\BlasterMa
 C:\Users\amlon450\Desktop\Blaster Master C#\Blaster Master\obj\Release\Blaster Master.csproj.GenerateResource.Cache
 C:\Users\amlon450\Desktop\Blaster Master C#\Blaster Master\obj\Release\BlasterMaster.exe
 C:\Users\amlon450\Desktop\Blaster Master C#\Blaster Master\obj\Release\BlasterMaster.pdb
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\obj\Release\BlasterMaster.exe
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\obj\Release\BlasterMaster.pdb
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\obj\Release\Blaster Master.csprojResolveAssemblyReference.cache
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\obj\Release\BlasterMaster.Form1.resources
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\obj\Release\BlasterMaster.Properties.Resources.resources
+C:\Users\amlon450\Documents\GitHub\CosmicBlaster\Blaster Master\obj\Release\Blaster Master.csproj.GenerateResource.Cache
