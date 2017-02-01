@@ -1616,7 +1616,7 @@ namespace BlasterMaster
             // An absolute complete illusion
             //------------------------------------------------------------------------------------------------------------------
 
-            int speed = 0;
+            /*int speed = 0;
 
             // Apply scrolling speed
             if (player.isDoingWarp())
@@ -1651,10 +1651,10 @@ namespace BlasterMaster
             for (int i = 0; i <= 7; i++)
             {
                 vectorScroll[i].Draw(graphicsBuffer);
-            }
+            }*/
 
         }
-        static int static_doScroll_timeScale = 0;
+        //static int static_doScroll_timeScale = 0;
 
         private void doParticles()
         {
@@ -1777,13 +1777,13 @@ namespace BlasterMaster
             // Purpose: Render background bitmap (600x800)
             //------------------------------------------------------------------------------------------------------------------
 
-            int i = 0;
+            //int i = 0;
 
             // Inc counter
             static_renderBackground_timeScale += 1;
 
             // Animate ...
-            if (static_renderBackground_timeScale == glowSpeed)
+           /* if (static_renderBackground_timeScale == glowSpeed)
             {
                 static_renderBackground_timeScale = 0;
 
@@ -1797,15 +1797,15 @@ namespace BlasterMaster
                     static_renderBackground_ani -= 1;
                 }
             }
-
+            */
             // Render static background ...
             graphicsBuffer.DrawImage(background[0], new Rectangle(0, 0, 600, 800), 0, 0, 600, 800, GraphicsUnit.Pixel, ImageAtt);
 
             // Render animated top portion with animated neon glow
-            graphicsBuffer.DrawImage(background[static_renderBackground_ani + 1], new Rectangle(0, 100, 600, 100), 0, 0, 600, 100, GraphicsUnit.Pixel, ImageAtt);
+            //graphicsBuffer.DrawImage(background[static_renderBackground_ani + 1], new Rectangle(0, 100, 600, 100), 0, 0, 600, 100, GraphicsUnit.Pixel, ImageAtt);
 
             // Toggle back / forth when last frame is reached
-            switch (static_renderBackground_ani)
+            /*switch (static_renderBackground_ani)
             {
                 case 4:
                     static_renderBackground_dir = 1;
@@ -1813,10 +1813,10 @@ namespace BlasterMaster
                 case 0:
                     static_renderBackground_dir = 0;
                     break;
-            }
+            }*/
 
             // Call to render all current stars
-            for (i = 0; i <= 99; i++)
+            /*for (i = 0; i <= 99; i++)
             {
                 stars[i].Draw(graphicsBuffer);
             }
@@ -1824,10 +1824,11 @@ namespace BlasterMaster
             // Find a new scattered batch at random
             if (tScales.getTAcaleC() == 0)
                 fetchNewStars();
+                */
         }
-
-        static int static_renderBackground_dir = 0;
-        static int static_renderBackground_ani = 0;
+        
+        //static int static_renderBackground_dir = 0;
+        //static int static_renderBackground_ani = 0;
         static int static_renderBackground_timeScale = 0;
 
         private void initDelay()
@@ -1890,7 +1891,7 @@ namespace BlasterMaster
             DrawText(graphicsBuffer, "LIVES: ", 12, 742, 16, FontStyle.Bold, Brushes.Black);
             DrawText(graphicsBuffer, "LIVES: ", 10, 740, 16, FontStyle.Bold, Brushes.White);
 
-            SolidBrush brush = new SolidBrush(Color.Green);
+            SolidBrush brush = new SolidBrush(Color.Blue);
             Pen pen = new System.Drawing.Pen(Color.Black);
 
             // Draw bar graph depicting num of lives remaining
@@ -2306,11 +2307,11 @@ namespace BlasterMaster
             int e = 0;
             int c = 0;
 
-            DrawText(graphicsBuffer, ":: BLASTER MASTER World Edition -- ßeta rev: 1.0 -- 12/03/10 :: ", 20, 50, 12, FontStyle.Regular, Brushes.Red);
+            DrawText(graphicsBuffer, "COSMIC BLASTER", 20, 50, 12, FontStyle.Regular, Brushes.Red);
 
             // Precision regulated  delay
-            initDelay();
-            DrawText(graphicsBuffer, "Precision regulated delay initialized", 20, 100, 12, FontStyle.Regular, Brushes.White);
+            //initDelay();
+            //DrawText(graphicsBuffer, "Precision regulated delay initialized", 20, 100, 12, FontStyle.Regular, Brushes.White);
 
             // Update screen
             this.Refresh();
@@ -2321,13 +2322,13 @@ namespace BlasterMaster
                 FSOUND_Init(44100, 32, 0);
 
                 // Good
-                DrawText(graphicsBuffer, "FMOD sound engine initialize", 20, 120, 12, FontStyle.Regular, Brushes.White);
+                //DrawText(graphicsBuffer, "FMOD sound engine initialize", 20, 120, 12, FontStyle.Regular, Brushes.White);
 
             }
             catch
             {
                 // Problems
-                DrawText(graphicsBuffer, "FMOD sound engine unable to initialize", 20, 120, 12, FontStyle.Regular, Brushes.White);
+                //DrawText(graphicsBuffer, "FMOD sound engine unable to initialize", 20, 120, 12, FontStyle.Regular, Brushes.White);
                 sndEngineError = true;
             }
 
