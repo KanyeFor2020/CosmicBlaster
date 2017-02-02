@@ -197,9 +197,6 @@
     <None Include="Resources\sheildB.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\starA.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\title.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

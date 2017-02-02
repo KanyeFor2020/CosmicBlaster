@@ -899,7 +899,7 @@ namespace BlasterMaster
                         if (delayNextShot == 0)
                         {
                             // Key must be released before another shot can be fired
-                            if (shootKeyUP)
+                           // if (shootKeyUP)
                             {
                                 shootKeyUP = false;
 
@@ -1000,7 +1000,7 @@ namespace BlasterMaster
                     playerExplosion = false;
 
                     // Render star graphic
-                    graphicsBuffer.DrawImage(star, new Rectangle(27, 265, star.Width, star.Height - 50), 0, 0, star.Width, star.Height, GraphicsUnit.Pixel, ImageAtt);
+                    //graphicsBuffer.DrawImage(star, new Rectangle(27, 265, star.Width, star.Height - 50), 0, 0, star.Width, star.Height, GraphicsUnit.Pixel, ImageAtt);
 
                     if (lives != -1)
                     {
@@ -1891,7 +1891,7 @@ namespace BlasterMaster
             DrawText(graphicsBuffer, "LIVES: ", 12, 742, 16, FontStyle.Bold, Brushes.Black);
             DrawText(graphicsBuffer, "LIVES: ", 10, 740, 16, FontStyle.Bold, Brushes.White);
 
-            SolidBrush brush = new SolidBrush(Color.Blue);
+            SolidBrush brush = new SolidBrush(Color.SpringGreen);
             Pen pen = new System.Drawing.Pen(Color.Black);
 
             // Draw bar graph depicting num of lives remaining
@@ -2126,13 +2126,13 @@ namespace BlasterMaster
             //                                        :: F2 to start a new game ::
 
             // Render star
-            graphicsBuffer.DrawImage(star, new Rectangle(75, 230, 450, 125), 0, 0, star.Width, star.Height, GraphicsUnit.Pixel, ImageAtt);
+            //graphicsBuffer.DrawImage(star, new Rectangle(75, 230, 450, 125), 0, 0, star.Width, star.Height, GraphicsUnit.Pixel, ImageAtt);
 
             // Render text ...
             if (tScales.getTAcaleC() > 10)
             {
                 DrawText(graphicsBuffer, "Press F2 To Play", 207, 279, 16, FontStyle.Bold, Brushes.Black);
-                DrawText(graphicsBuffer, "Press F2 To Play", 209, 281, 16, FontStyle.Bold, Brushes.Yellow);
+                DrawText(graphicsBuffer, "Press F2 To Play", 209, 281, 16, FontStyle.Bold, Brushes.SpringGreen);
             }
 
             //                           :: Render animated high score table (top 5 players) ::
@@ -2140,9 +2140,9 @@ namespace BlasterMaster
             // Table heading: top 5 players
             for (i = 0; i <= 2; i++)
             {
-                DrawText(graphicsBuffer, "TOP 5 PLAYERS", 160 + i, 400 + i, 23, FontStyle.Bold, Brushes.DarkRed);
+                DrawText(graphicsBuffer, "TOP 5 PLAYERS", 160 + i, 400 + i, 23, FontStyle.Bold, Brushes.Purple);
             }
-            DrawText(graphicsBuffer, "TOP 5 PLAYERS", 160 + i, 400 + i, 23, FontStyle.Bold, Brushes.Yellow);
+            DrawText(graphicsBuffer, "TOP 5 PLAYERS", 160 + i, 400 + i, 23, FontStyle.Bold, Brushes.SpringGreen);
 
             // Score table: names & scores with drop shadow and white face
             for (i = 0; i <= 4; i++)
@@ -2198,7 +2198,7 @@ namespace BlasterMaster
             if (genWorkingCounter < 100)
             {
                // Render star graphic
-               graphicsBuffer.DrawImage(star, new Rectangle(27, 265, star.Width, star.Height - 50), 0, 0, star.Width, star.Height, GraphicsUnit.Pixel, ImageAtt);
+               //graphicsBuffer.DrawImage(star, new Rectangle(27, 265, star.Width, star.Height - 50), 0, 0, star.Width, star.Height, GraphicsUnit.Pixel, ImageAtt);
 
                // Text ...
                DrawText(graphicsBuffer, "Level Complete!", 180, 328, 22, FontStyle.Bold, Brushes.Black);
@@ -2236,7 +2236,7 @@ namespace BlasterMaster
             genWorkingCounter += 1;
 
             // Render star graphic
-            graphicsBuffer.DrawImage(star, new Rectangle(27, 265, star.Width, star.Height - 50), 0, 0, star.Width, star.Height, GraphicsUnit.Pixel, ImageAtt);
+            //graphicsBuffer.DrawImage(star, new Rectangle(27, 265, star.Width, star.Height - 50), 0, 0, star.Width, star.Height, GraphicsUnit.Pixel, ImageAtt);
 
             // Structured code controlled by counter status
             if (genWorkingCounter == 1)
@@ -2269,7 +2269,7 @@ namespace BlasterMaster
             genWorkingCounter += 1;
 
             // Render star graphic
-            graphicsBuffer.DrawImage(star, new Rectangle(27, 265, star.Width, star.Height - 50), 0, 0, star.Width, star.Height, GraphicsUnit.Pixel, ImageAtt);
+            //graphicsBuffer.DrawImage(star, new Rectangle(27, 265, star.Width, star.Height - 50), 0, 0, star.Width, star.Height, GraphicsUnit.Pixel, ImageAtt);
 
             // Structured code controlled by counter status
             if (genWorkingCounter == 1)
@@ -2383,9 +2383,9 @@ namespace BlasterMaster
 
             gameTitle = BlasterMaster.Properties.Resources.title;
             keyInstructions = BlasterMaster.Properties.Resources.keys;
-            star = BlasterMaster.Properties.Resources.starA;
+            //star = BlasterMaster.Properties.Resources.starA;
             gameTitle.MakeTransparent(Color.Black);
-            star.MakeTransparent(Color.Black);
+           // star.MakeTransparent(Color.Black);
             keyInstructions.MakeTransparent(Color.Red);
 
             // Invader sprites ...
