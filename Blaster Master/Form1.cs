@@ -89,10 +89,11 @@ namespace BlasterMaster
         private int score;
         private int highScore;
         private int playerPivotPos = 61;
+        private int playerPivotPosY = 61;
         private string playersName;
 
         // Boolean
-        private bool[] moveKeyPress = new bool[3];
+        private bool[] moveKeyPress = new bool[4];
         private bool shootKeyPress;
         private bool shootKeyUP;
         private bool levelCompleted;
@@ -844,7 +845,7 @@ namespace BlasterMaster
             {
                 // Fetch player coords
                 x = player.getPivotX(playerPivotPos);
-                y = player.getPivotY(playerPivotPos);
+                y = player.getPivotY(playerPivotPosY);
 
                 // Apply player coords
                 player.setY(y + 25);
@@ -872,6 +873,8 @@ namespace BlasterMaster
                 // fetch coords and apply ...
                 x = player.getPivotX(playerPivotPos);
                 player.setX(x - 20);
+                y = player.getPivotY(playerPivotPosY);
+                player.setY(y - 20);
             }
 
             // Disallow shooting during end of level scenes otherwise shoot at player's request
@@ -889,6 +892,16 @@ namespace BlasterMaster
                 {
                     if (playerPivotPos < 121)
                         playerPivotPos += 1;
+                }
+                else if (moveKeyPress[2])
+                {
+                    if (playerPivotPosY > 0)
+                        playerPivotPosY -= 1;
+                }
+                else if (moveKeyPress[3])
+                {
+                    if (playerPivotPosY < 121)
+                        playerPivotPosY += 1;
                 }
 
                 if (!levelCompleted)
@@ -1585,9 +1598,16 @@ namespace BlasterMaster
             {
                 moveKeyPress[1] = true;
             }
-
+            else if (GetAsyncKeyState(38) != 0)
+            {
+                moveKeyPress[2] = true;
+            }
+            else if (GetAsyncKeyState(40) != 0)
+            {
+                moveKeyPress[3] = true;
+            }
             // Fire 
-            if (GetAsyncKeyState(17) != 0)
+            if (GetAsyncKeyState(32) != 0)
             {
                 //if (shootKeyUP)
                     shootKeyPress = true;
@@ -1891,7 +1911,7 @@ namespace BlasterMaster
             DrawText(graphicsBuffer, "LIVES: ", 12, 742, 16, FontStyle.Bold, Brushes.Black);
             DrawText(graphicsBuffer, "LIVES: ", 10, 740, 16, FontStyle.Bold, Brushes.White);
 
-            SolidBrush brush = new SolidBrush(Color.SpringGreen);
+            SolidBrush brush = new SolidBrush(Color.Red);
             Pen pen = new System.Drawing.Pen(Color.Black);
 
             // Draw bar graph depicting num of lives remaining
@@ -2132,7 +2152,7 @@ namespace BlasterMaster
             if (tScales.getTAcaleC() > 10)
             {
                 DrawText(graphicsBuffer, "Press F2 To Play", 207, 279, 16, FontStyle.Bold, Brushes.Black);
-                DrawText(graphicsBuffer, "Press F2 To Play", 209, 281, 16, FontStyle.Bold, Brushes.SpringGreen);
+                DrawText(graphicsBuffer, "Press F2 To Play", 209, 281, 16, FontStyle.Bold, Brushes.Red);
             }
 
             //                           :: Render animated high score table (top 5 players) ::
@@ -2142,7 +2162,7 @@ namespace BlasterMaster
             {
                 DrawText(graphicsBuffer, "TOP 5 PLAYERS", 160 + i, 400 + i, 23, FontStyle.Bold, Brushes.Purple);
             }
-            DrawText(graphicsBuffer, "TOP 5 PLAYERS", 160 + i, 400 + i, 23, FontStyle.Bold, Brushes.SpringGreen);
+            DrawText(graphicsBuffer, "TOP 5 PLAYERS", 160 + i, 400 + i, 23, FontStyle.Bold, Brushes.Red);
 
             // Score table: names & scores with drop shadow and white face
             for (i = 0; i <= 4; i++)
@@ -2279,10 +2299,10 @@ namespace BlasterMaster
             else if (genWorkingCounter < 250)
             {
                graphicsBuffer.DrawImage(keyInstructions, new Rectangle(180, 300, keyInstructions.Width, keyInstructions.Height), 0, 0, keyInstructions.Width, keyInstructions.Height, GraphicsUnit.Pixel, ImageAtt);
-               DrawText(graphicsBuffer, "SHOOT", 180, 335, 12, FontStyle.Bold, Brushes.White);
-               DrawText(graphicsBuffer, "LEFT", 272, 335, 12, FontStyle.Bold, Brushes.White);
-               DrawText(graphicsBuffer, "RIGHT", 360, 335, 12, FontStyle.Bold, Brushes.White);
-               DrawText(graphicsBuffer, "Game Controls", 225, 355, 14, FontStyle.Bold, Brushes.Red);
+               DrawText(graphicsBuffer, "SHOOT", 180, 355, 12, FontStyle.Bold, Brushes.Red);
+               DrawText(graphicsBuffer, "LEFT", 260, 355, 12, FontStyle.Bold, Brushes.Red);
+               DrawText(graphicsBuffer, "RIGHT", 340, 355, 12, FontStyle.Bold, Brushes.Red);
+               DrawText(graphicsBuffer, "Game Controls", 225, 370, 14, FontStyle.Bold, Brushes.Red);
             }
             else
             {

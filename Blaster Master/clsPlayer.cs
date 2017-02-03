@@ -352,6 +352,7 @@ namespace BlasterMaster
             //------------------------------------------------------------------------------------------------------------------
 
             return this.pivotX[index];
+            //return (570 - index * 2);
         }
 
         public int getPivotY(int index)
@@ -360,7 +361,8 @@ namespace BlasterMaster
             // Purpose: Accessor (fetch player y axis to pivot on)   
             //------------------------------------------------------------------------------------------------------------------
 
-            return this.pivotY[index];
+            //return this.pivotY[index];
+            return (index * 3 + 434);
         }
 
         public void Draw(Graphics Destination, bool doExplosion, int enabled)
