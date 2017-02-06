@@ -888,6 +888,14 @@ namespace BlasterMaster
                     if (playerPivotPos > 0)
                         playerPivotPos -= 1;
                 }
+                else if(moveKeyPress[1] && moveKeyPress[2])
+                {
+                    if (playerPivotPos > 0 && playerPivotPosY > -140)
+                    {
+                        playerPivotPos += 1;
+                        playerPivotPosY -= 1;
+                    }
+                }
                 else if (moveKeyPress[1])
                 {
                     if (playerPivotPos < 121)
@@ -895,12 +903,12 @@ namespace BlasterMaster
                 }
                 else if (moveKeyPress[2])
                 {
-                    if (playerPivotPosY > 0)
+                    if (playerPivotPosY > -140)
                         playerPivotPosY -= 1;
                 }
                 else if (moveKeyPress[3])
                 {
-                    if (playerPivotPosY < 121)
+                    if (playerPivotPosY < 50)
                         playerPivotPosY += 1;
                 }
 
@@ -992,6 +1000,8 @@ namespace BlasterMaster
                 // Key flags off
                 moveKeyPress[0] = false;
                 moveKeyPress[1] = false;
+                moveKeyPress[2] = false;
+                moveKeyPress[3] = false;
 
             }
             else //- The player has been shot or an invader has crashed into them
@@ -1159,7 +1169,7 @@ namespace BlasterMaster
 
                         if (invaders[j].isActive())
                         {
-                            if (invaders[j].isDiving())
+                            //if (invaders[j].isDiving())
                             {
                                 // Enemy ship 
                                 rect1.X = invaders[j].getRectX();
@@ -1981,7 +1991,7 @@ namespace BlasterMaster
 
             for (i = 0; i <= 4; i++)
             {
-                if (score > Convert.ToInt32(Top5PlayerScore[i]))
+               // if (score > Convert.ToInt32(Top5PlayerScore[i]))
                 {
                     // Prompt player for their name
 
